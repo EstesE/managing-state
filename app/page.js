@@ -2,30 +2,33 @@ import { Inter } from 'next/font/google';
 import styles from './page.module.css';
 import Heading from '@/components/Heading';
 import Section from '@/components/Section';
-
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
 const Home = () => {
   return (
-    <Section>
-      <Heading>Title</Heading>
+    <>
+      <Link href="/tasks">Tasks</Link>
       <Section>
-        <Heading>Heading</Heading>
-        <Heading>Heading</Heading>
-        <Heading>Heading</Heading>
+        <Heading>Title</Heading>
         <Section>
-          <Heading>Sub-heading</Heading>
-          <Heading>Sub-heading</Heading>
-          <Heading>Sub-heading</Heading>
+          <Heading>Heading</Heading>
+          <Heading>Heading</Heading>
+          <Heading>Heading</Heading>
           <Section>
-            <Heading>Sub-sub-heading</Heading>
-            <Heading>Sub-sub-heading</Heading>
-            <Heading>Sub-sub-heading</Heading>
+            <Heading>Sub-heading</Heading>
+            <Heading>Sub-heading</Heading>
+            <Heading>Sub-heading</Heading>
+            <Section>
+              <Heading>Sub-sub-heading</Heading>
+              <Heading>Sub-sub-heading</Heading>
+              <Heading>Sub-sub-heading</Heading>
+            </Section>
           </Section>
         </Section>
       </Section>
-    </Section>
+    </>
   )
 };
 
